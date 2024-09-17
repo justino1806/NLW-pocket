@@ -90,7 +90,7 @@ const metasAbertas = async () => {
         return
     }
     const abertas = metas.filter((metas) => {
-        return meta.checked != true
+        return metas.checked != true
     })
 
     if (abertas.length == 0) {
@@ -99,7 +99,7 @@ const metasAbertas = async () => {
     }
 
     await select({
-        message: "Metas Abertas:" = abertas.length,
+        message: "Metas Abertas:" + abertas.length,
         choices: [...abertas]
     })
 }
